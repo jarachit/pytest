@@ -733,7 +733,7 @@ class Session(nodes.FSCollector):
 
                 if parent.is_dir():
                     pkginit = parent / "__init__.py"
-                    if pkginit.is_file() and parent not in node_cache1:
+                    if pkginit.is_file():
                         pkg = self._collectpackage(parent)
                         if pkg is not None:
                             pkg_roots[parent] = pkg
